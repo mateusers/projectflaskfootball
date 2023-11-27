@@ -3,9 +3,10 @@ from flask import render_template
 
 app = Flask(__name__)
 
-@app.route('/index')
-def index():
-    return 'main page'
 @app.route('/')
-def mainpage():
-    return 'Main page'
+def main():
+    return render_template('mainpage.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
