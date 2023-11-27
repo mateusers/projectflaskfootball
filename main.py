@@ -6,3 +6,7 @@ app = Flask(__name__)
 @app.route('/index')
 def index():
     return 'mainpage'
+
+@app.route('/')
+def mainpage():
+    return 'Main page'
